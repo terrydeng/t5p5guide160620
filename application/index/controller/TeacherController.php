@@ -12,7 +12,7 @@ class TeacherController extends Controller
         try {//
 			// 获取查询信息
             $name = input('get.name');
-            echo $name;
+//            echo $name;
 			
             $pageSize = 5; // 每次显示5条数据
             $Teacher = new Teacher; 
