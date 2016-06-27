@@ -18,7 +18,10 @@ class TeacherController extends Controller
             $Teacher = new Teacher; 
 
             // 调用分页
-            $teachers = $Teacher->paginate($pageSize);
+            //$teachers = $Teacher->paginate($pageSize);
+			//Search搜索160621
+			$teachers = $Teacher->where('name', 'like', '%' . $name . '%')->paginate($pageSize);
+
 
             // 向V层传数据
             $this->assign('teachers', $teachers);
