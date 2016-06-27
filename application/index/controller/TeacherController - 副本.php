@@ -9,11 +9,7 @@ class TeacherController extends Controller
 {
     public function index()
     {
-        try {//
-			// 获取查询信息
-            $name = input('get.name');
-            echo $name;
-			
+        try {
             $pageSize = 5; // 每次显示5条数据
             $Teacher = new Teacher; 
 
